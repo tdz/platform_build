@@ -507,8 +507,7 @@ HOST_JDK_TOOLS_JAR:= $(shell $(BUILD_SYSTEM)/find-jdk-tools-jar.sh)
 
 ifneq ($(HOST_JDK_TOOLS_JAR),)
 ifeq ($(wildcard $(HOST_JDK_TOOLS_JAR)),)
-#$(error Error: could not find jdk tools.jar, please install JDK6, \
-    which you can download from java.sun.com)
+#$(error Error: could not find jdk tools.jar, please check if your JDK was installed correctly)
 endif
 endif
 
