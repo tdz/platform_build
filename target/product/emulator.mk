@@ -48,11 +48,13 @@ PRODUCT_PACKAGES += \
     libOpenglSystemCommon \
     libGLESv2_emulation \
     libGLESv1_enc \
+    nfcd \
     qemu-props \
     qemud \
     camera.goldfish \
     lights.goldfish \
     gps.goldfish \
+    nfc_nci.generic \
     sensors.goldfish
 
 
@@ -63,5 +65,6 @@ PRODUCT_COPY_FILES += \
     device/generic/goldfish/ueventd.goldfish.rc:root/ueventd.goldfish.rc
 
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.moz.nfc.enabled=true \
     ro.moz.ril.numclients=9 \
     $(empty)
