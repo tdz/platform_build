@@ -146,9 +146,11 @@ def IsRegular(info):
 def ClosestFileMatch(src, tgtfiles, existing):
   """Returns the closest file match between a source file and list
      of potential matches.  The exact filename match is preferred,
-     then the sha1 is searched for, and finally a file with the same
-     basename is evaluated.  Rename support in the updater-binary is
-     required for the latter checks to be used."""
+     and then the sha1 is searched for. Rename support in the
+     updater-binary is required for the latter checks to be used.
+
+     We do not match basename any longer to avoid corrupting the
+     B2G webapp store."""
 
   result = tgtfiles.get("path:" + src.name)
   if result is not None:
@@ -160,12 +162,6 @@ def ClosestFileMatch(src, tgtfiles, existing):
   if src.size < 1000:
     return None
 
-  result = tgtfiles.get("sha1:" + src.sha1)
-  if result is not None and existing.get(result.name) is None:
-    return result
-  result = tgtfiles.get("file:" + src.name.split("/")[-1])
-  if result is not None and existing.get(result.name) is None:
-    return result
   return None
 
 class ItemSet(object):
@@ -997,8 +993,7 @@ class FileDifference(object):
       # Only allow eligibility for filename/sha matching
       # if there isn't a perfect path match.
       if target_data.get(sf.name) is None:
-        matching_file_cache["file:" + fn.split("/")[-1]] = sf
-        matching_file_cache["sha:" + sf.sha1] = sf
+        matching_file_cache["sha1:" + sf.sha1] = sf
 
     for fn in sorted(target_data.keys()):
       tf = target_data[fn]
