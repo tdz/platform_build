@@ -84,7 +84,6 @@ PRODUCT_PACKAGES += \
     libutils \
     libvisualizer \
     libvorbisidec \
-    libmediandk \
     libwifi-service \
     media \
     media_cmd \

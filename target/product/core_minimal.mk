@@ -59,7 +59,6 @@ PRODUCT_PACKAGES += \
     libOpenSLES \
     libdownmix \
     libdrmframework \
-    libfilterfw \
     libkeystore \
     libgatekeeper \
     libwilhelm \
