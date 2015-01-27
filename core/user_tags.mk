@@ -518,3 +518,22 @@ GRANDFATHERED_USER_MODULES += \
 	wpa_supplicant \
 	yuv420sp2rgb \
 	zipalign
+
+# KK modules
+
+OPTIONAL_USER_MODULES += \
+	emugen \
+	emulator64-arm \
+	emulator_renderer \
+	lib64EGL_translator \
+	lib64GLES_CM_translator \
+	lib64GLES_V2_translator \
+	lib64OpenglRender \
+	libEGL_translator \
+	libGLES_CM_translator \
+	libGLES_V2_translator \
+	libOpenglRender \
+	libut_rendercontrol_dec \
+	qemu-android-arm \
+	triangleCM \
+	triangleV2
