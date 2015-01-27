@@ -523,7 +523,11 @@ GRANDFATHERED_USER_MODULES += \
 
 OPTIONAL_USER_MODULES += \
 	emugen \
+	emulator-x86 \
+	emulator-mips \
 	emulator64-arm \
+	emulator64-mips \
+	emulator64-x86 \
 	emulator_renderer \
 	lib64EGL_translator \
 	lib64GLES_CM_translator \
@@ -535,5 +539,7 @@ OPTIONAL_USER_MODULES += \
 	libOpenglRender \
 	libut_rendercontrol_dec \
 	qemu-android-arm \
+	qemu-android-mips \
+	qemu-android-x86 \
 	triangleCM \
 	triangleV2
