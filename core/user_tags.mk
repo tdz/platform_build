@@ -522,6 +522,7 @@ GRANDFATHERED_USER_MODULES += \
 # KK modules
 
 OPTIONAL_USER_MODULES += \
+	egl.cfg \
 	emugen \
 	emulator-x86 \
 	emulator-mips \
@@ -529,15 +530,23 @@ OPTIONAL_USER_MODULES += \
 	emulator64-mips \
 	emulator64-x86 \
 	emulator_renderer \
+	gralloc.goldfish \
 	lib64EGL_translator \
 	lib64GLES_CM_translator \
 	lib64GLES_V2_translator \
 	lib64OpenglRender \
+	libEGL_emulation \
 	libEGL_translator \
+	libGLESv1_CM_emulation \
+	libGLESv1_enc \
+	libGLESv2_emulation \
+	libGLESv2_enc \
 	libGLES_CM_translator \
 	libGLES_V2_translator \
 	libOpenglRender \
+	libOpenglSystemCommon \
 	libut_rendercontrol_dec \
+	lib_renderControl_enc \
 	qemu-android-arm \
 	qemu-android-mips \
 	qemu-android-x86 \
