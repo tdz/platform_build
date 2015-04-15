@@ -345,7 +345,7 @@ class Item(object):
 
       recurse(self, (-1, -1, -1, -1, None, None))
     else:
-      if self.name in self.ITEMS:
+      if self.name in self.itemset.ITEMS:
         script.SetPermissions("/"+self.name, self.uid, self.gid,
                               self.mode, self.selabel, self.capabilities)
 
