@@ -13,6 +13,8 @@ DISABLED_USER_MODULES := \
 	app_process__asan \
 	xaplay \
 	librs_jni \
+	libandroid \
 	libandroid_runtime \
 	hwuitest \
-
+	skia_dm \
+	skia_nanobench
